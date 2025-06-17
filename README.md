@@ -1,5 +1,5 @@
 # AutoComplete
-A simple implementation of a prefix based auto-completer that is thread safe.
+A simple implementation of a prefix based auto-completer that is thread safe using a trie data structure.
 
 ## Installation and Import
 ```bash
@@ -17,14 +17,14 @@ import "github.com/EddisonKing/autocomplete"
 ac := autocomplete.New()
 ```
 
-This will create a new `AutoComplete` that can then load `string` entries into.
+This will create a new `AutoComplete` that you can then load `string` entries into for later use in auto-completion.
 
 ### Loading Entries
 ```go
 // Single string
 ac.Load("apples")
 // Or multiple
-ac.Load([]string{"apples", "bananas", "ewwwww_fruit"})
+ac.Load([]string{"apples", "bananas", "ewwwww_fruit"}...)
 ```
 
 This will load entries into the `AutoComplete` allowing them to be returned as entries during auto-completion. 
